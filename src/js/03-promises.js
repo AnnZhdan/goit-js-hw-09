@@ -32,7 +32,7 @@ function onPromiseCreate(e) {
   let amount = Number(refs.amount.value);
 
   for (let i = 1; i <= amount; i += 1) {
-    let promiseDelay = valueDelay + step * i;
+    let promiseDelay = valueDelay + step * (i - 1);
 
     createPromise(i, promiseDelay)
       .then(({ position, delay }) => {
